@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_light"
+    tools:context=".CounterActivity">
+    <EditText
+        android:id="@+id/etContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="enter time in seconds"
+        android:inputType="textPersonName"
+        />
+    <Button
+        android:id="@+id/btnToast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showToast"
+        android:text="Toast" />
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="50sp"
+        android:text="0" />
+
+    <Button
+        android:id="@+id/btnCount"
+        android:onClick="updateCounter"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="set timer" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item  android:id="@+id/miFirst" android:title="first item" />
+    <item  android:id="@+id/miSecond" android:title="second item" />
+    <item  android:id="@+id/miThird" android:title="third item" />
+
+</menu>

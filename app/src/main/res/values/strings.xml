@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Firstapp</string>
+    <string name="enter_nm">enter name</string>
+    <string name="enter_pwd">enter password</string>
+</resources>
