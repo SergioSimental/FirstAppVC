@@ -8,4 +8,7 @@
         the full book title and who wrote the book!</string>
     <string name="button_text">Search Books</string>
     <string name="input_hint">Enter a Book Title</string>
+    <string name="city_input_hint">enter city</string>
+    <string name="weather">Enter a city to find the temperature of the city</string>
+    <string name="button_weather">Search Weather</string>
 </resources>
