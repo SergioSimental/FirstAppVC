@@ -1,11 +1,14 @@
-package com.example.firstappvc;
+package com.example.firstappvc.books;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.firstappvc.R;
 
 public class BookActivity extends AppCompatActivity {
     EditText mBookInput;
@@ -18,6 +21,9 @@ public class BookActivity extends AppCompatActivity {
         mBookInput = findViewById(R.id.bookInput);
         mTitleText = findViewById(R.id.titleText);
         mAuthorText = findViewById(R.id.authorText);
+        String action = "ineed.water.todrink";
+        Intent wIntent = new Intent(action);
+        sendBroadcast(wIntent);
     }
 
 

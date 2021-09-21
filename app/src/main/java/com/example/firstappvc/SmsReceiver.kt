@@ -6,7 +6,9 @@ import android.content.Intent
 import android.os.Build
 import android.provider.Telephony
 import android.telephony.SmsMessage
+import android.telephony.TelephonyManager
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 
 class SmsReceiver : BroadcastReceiver() {
@@ -19,7 +21,6 @@ class SmsReceiver : BroadcastReceiver() {
                 Telephony.Sms.Intents.getMessagesFromIntent(intent)[0]
             else SmsMessage.createFromPdu(pdusObj[0] as ByteArray)
 
-
             val phoneNumber = currentMessage.displayOriginatingAddress
             Log.e("receiver", phoneNumber)
 
@@ -29,7 +30,9 @@ class SmsReceiver : BroadcastReceiver() {
             val smsContent = currentMessage.getDisplayMessageBody()
             Log.d("receiver","Message: "+smsContent) // Always max 67 characters!
 
+            Toast.makeText(context, "From: " + senderNum + smsContent, Toast.LENGTH_SHORT).show()
         }
+
 
     }
 }

@@ -1,5 +1,7 @@
 package com.example.firstappvc
 
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +11,9 @@ import android.view.View
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.messaging.FirebaseMessaging
+
 
 class CounterActivity : AppCompatActivity() {
     var TAG = CounterActivity::class.java.simpleName
@@ -30,6 +35,23 @@ class CounterActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         Log.e(TAG,"onstart")
+
+
+        FirebaseMessaging.getInstance().token
+            .addOnCompleteListener(OnCompleteListener { task ->
+                if (!task.isSuccessful) {
+                    Log.w(TAG, "Fetching FCM registration token failed", task.exception)
+                    return@OnCompleteListener
+                }
+
+                // Get new FCM registration token
+                val token: String = task.getResult().toString()
+
+                // Log and toast
+                //val msg = getString(R.string.msg_token_fmt, token)
+                Log.d(TAG, token)
+                Toast.makeText(this, token, Toast.LENGTH_SHORT).show()
+            })
 
     }
 
@@ -83,5 +105,24 @@ class CounterActivity : AppCompatActivity() {
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
+    }
+
+    fun setAlarm(view: View){
+        var alarmManager: AlarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
+        var intent: Intent = Intent(this, HomeActivity::class.java)
+        var pendingIntent: PendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_ONE_SHOT)
+        var oneMin: Long = 1*60*1000;
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+ oneMin, oneMin, pendingIntent)
+    }
+
+    fun sendSMS(view: View) {
+        var alarmManager: AlarmManager = getSystemService(ALARM_SERVICE) as AlarmManager
+        var intent: Intent = Intent(this, HomeActivity::class.java)
+        intent.putExtra("sms" , "Happy Birthday")
+        intent.putExtra("number", 5556)
+        var pendingIntent: PendingIntent = PendingIntent.getActivity(this, 123, intent, PendingIntent.FLAG_ONE_SHOT)
+        var oneMin: Long = 1*60*1000;
+        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()+ oneMin, oneMin, pendingIntent)
+
     }
 }

@@ -39,7 +39,19 @@
         android:layout_height="wrap_content"
         android:text="set timer" />
 
+    <Button
+        android:id="@+id/button"
+        android:onClick="setAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="set Alarm" />
 
+    <Button
+        android:id="@+id/button2"
+        android:onClick="sendSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="set HBD wishes" />
 
 
 </LinearLayout>

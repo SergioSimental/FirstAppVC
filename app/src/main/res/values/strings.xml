@@ -11,4 +11,7 @@
     <string name="city_input_hint">enter city</string>
     <string name="weather">Enter a city to find the temperature of the city</string>
     <string name="button_weather">Search Weather</string>
+
+    <string name="channel_name">service demo</string>
+    <string name="channel_description">channel description for service demo</string>
 </resources>

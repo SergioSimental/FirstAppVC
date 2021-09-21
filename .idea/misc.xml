@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/btn_selector.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/button_disable.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/button_disabled.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/button_focused.xml" value="0.14635416666666667" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/button_pressed.xml" value="0.1" />
+        <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/ic_notify_background.xml" value="0.1" />
+        <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/notification_icon.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/rectangle.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/drawable/round.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/activity_async.xml" value="0.264" />
@@ -18,6 +21,8 @@
         <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/activity_main2.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/activity_recycler.xml" value="0.1" />
+        <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/activity_service_demo.xml" value="0.1" />
+        <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/activity_smsreceiver.xml" value="0.13125" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/activity_weather.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/layout/row_recyclerview.xml" value="0.1" />
         <entry key="..\:/src/FirstAppVC/app/src/main/res/menu/home_menu.xml" value="0.1" />
